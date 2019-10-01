@@ -13,6 +13,10 @@ class Vigila_WS extends REST_Controller {
   $this->load->helper('url'); /* Añadimos el helper al controlador */
   $this -> load -> model ('Vigila_model'); /* Añadimos el modelo de datos */
   }
+
+  /*
+URL: http://127.0.0.1:2145/RestVTO/index.php/Vigila_WS/getvigila
+  */
   public function getvigila_get() {
   $data = $this->Vigila_model->getVigila();
   header('Content-Type: application/json');
